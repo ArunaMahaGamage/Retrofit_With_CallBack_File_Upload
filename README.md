@@ -50,7 +50,7 @@
             public void onResponse(Call<ImageResponse> call, Response<ImageResponse> response) {
 
                 ImageResponse userModelResponse = response.body();
-//                UserModel userModel = userModelResponse.getUserModel();
+                //UserModel userModel = userModelResponse.getUserModel();
 
                 Log.d("MainActivity","user image = "+userModelResponse.getSuccess());
 
