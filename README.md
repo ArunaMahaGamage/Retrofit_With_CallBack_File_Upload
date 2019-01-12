@@ -1,26 +1,27 @@
-# Retrofit_With_CallBack_File_Upload
+# Retrofit With CallBack File Upload
 
 
 
 
 # You Need To Fallow This Way
 
-# Manifest Permission
+* Manifest Permission
 
     <uses-permission android:name="android.permission.INTERNET"/>
     
-# SET Interface to END Point
+* SET Interface to END Point
 
     @Multipart
     @POST("driver-image-upload")
     Call<ResponseBody> upload(@Part MultipartBody.Part num,
                               @Part MultipartBody.Part file);
                               
- # IN APIClass set Fallowing Things
+                             
+* IN APIClass set Fallowing Things
  
-    public static Retrofit retrofitImage;
+        public static Retrofit retrofitImage;
     
-    public static Retrofit getApiClientImage() {
+        public static Retrofit getApiClientImage() {
 
         if (retrofitImage == null) {
 
@@ -43,31 +44,7 @@
  # Set This Things in Your File Upload Place
  
     private void uploadFile() {
-        /*String driver_number = sharedPreference.getValue(context, Constants.MOBILE_NO);
-        RequestBody reqFile = RequestBody.create(MediaType.parse("application/json"), image);
-        RequestBody number = RequestBody.create(MediaType.parse("application/json"), driver_number);
-
-        Call<ImageResponse> call = apiInterface.updateProfilePhotoProcess(number,reqFile);
-        call.enqueue(new Callback<ImageResponse>() {
-            @Override
-            public void onResponse(Call<ImageResponse> call, Response<ImageResponse> response) {
-
-                ImageResponse userModelResponse = response.body();
-                //UserModel userModel = userModelResponse.getUserModel();
-
-                Log.d("MainActivity","user image = "+userModelResponse.getSuccess());
-
-            }
-
-            @Override
-            public void onFailure(Call<ImageResponse> call, Throwable t) {
-                Log.e("Upload error:", t.getMessage());
-
-
-            }
-        });*/
-
-
+      
         String driver_number = "071663971";
         // create upload service client
         ApiInterface service =
