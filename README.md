@@ -7,14 +7,14 @@
 
 * Manifest Permission
 
-    <uses-permission android:name="android.permission.INTERNET"/>
+      <uses-permission android:name="android.permission.INTERNET"/>
     
 * SET Interface to END Point
 
-    @Multipart
-    @POST("driver-image-upload")
-    Call<ResponseBody> upload(@Part MultipartBody.Part num,
-                              @Part MultipartBody.Part file);
+        @Multipart
+        @POST("driver-image-upload")
+        Call<ResponseBody> upload(@Part MultipartBody.Part num,
+                                  @Part MultipartBody.Part file);
                               
                              
 * IN APIClass set Fallowing Things
@@ -41,9 +41,10 @@
         return retrofitImage;
     }
     
- # Set This Things in Your File Upload Place
+    
+* Set This Things in Your File Upload Place
  
-    private void uploadFile() {
+      private void uploadFile() {
       
         String driver_number = "071663971";
         // create upload service client
